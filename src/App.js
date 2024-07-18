@@ -74,7 +74,7 @@ function App() {
           >
             {copied ? 'Copied!' : <CopyIcon />}
           </button>
-          <div className='text-xs md:text-sm overflow-x-auto whitespace-nowrap'>
+          <div className='text-xs md:text-sm overflow-x-auto whitespace-nowrap font-custom'>
             coming soon...
           </div>
         </div>
@@ -116,10 +116,7 @@ function App() {
         <motion.img
           src="/spirit.png"
           alt="Spirit"
-          style={{
-            maxWidth: '45%',
-            maxHeight: '45%',
-          }}
+          className="cursor-pointer max-w-[60%] md:max-w-[45%]"
           animate={{
             y: [0, -20, 0], // Hover up and down
           }}
@@ -129,11 +126,10 @@ function App() {
             ease: 'easeInOut', // Smooth ease-in-out transition
           }}
           onClick={handleSpiritClick}
-          className="cursor-pointer"
         />
       </div>
       {modalVisible && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 font-custom p-4">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 font-custom1 p-4">
           <div className="bg-white p-8 rounded-md text-center ring-2 ring-sky-300 ring-offset-2">
             <h2 className="text-xl mb-4">{fortune}</h2>
             <button 

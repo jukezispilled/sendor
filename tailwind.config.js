@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       custom: ['CustomFont', 'sans-serif'],
+      custom1: ['CustomFont1', 'sans-serif'],
     },
     extend: {},
   },
