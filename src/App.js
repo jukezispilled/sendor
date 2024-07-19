@@ -66,7 +66,7 @@ function App() {
         padding: 0,
       }}
     >
-      <div className='text-6xl md:text-8xl font-custom absolute bottom-5 left-5 text-white'>
+      <div className='text-6xl md:text-8xl font-custom absolute bottom-5 left-5 text-white invisible md:visible'>
         SENDOOOR
       </div>
       <div className='absolute left-5 top-5 flex justify-center rounded-full'>
