@@ -59,23 +59,26 @@ function App() {
     <div
       className="relative h-screen w-screen overflow-clip"
       style={{
-        backgroundImage: `url('/bg.png')`,
+        backgroundImage: `url('/bg.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         margin: 0,
         padding: 0,
       }}
     >
+      <div className='text-6xl md:text-8xl font-custom absolute bottom-5 left-5 text-white'>
+        SENDOOOR
+      </div>
       <div className='absolute left-5 top-5 flex justify-center rounded-full'>
-        <div className='rounded-full flex justify-center bg-slate-100 z-10 items-center gap-1 md:gap-4 px-5 py-3 max-w-full border-2 border-sky-500'>
+        <div className='rounded-full flex justify-center bg-slate-100 z-10 items-center gap-1 md:gap-4 px-5 py-3 max-w-full border-2'>
           <button
             onClick={handleCopy}
-            className="rounded-full text-xs bg-sky-500 text-white py-2 px-4 md:hover:bg-sky-700 transition-colors duration-300 z-10 whitespace-nowrap"
+            className="rounded-full text-xs bg-orange-500 text-white py-2 px-4 md:hover:bg-orange-600 transition-colors duration-300 z-10 whitespace-nowrap"
           >
             {copied ? 'Copied!' : <CopyIcon />}
           </button>
           <div className='text-xs md:text-sm overflow-x-auto whitespace-nowrap font-custom'>
-          EccWGNJtdCGccBKkgi2vaPjvdp5E5w8EVBMoQy63pump
+            EccWGNJtdCGccBKkgi2vaPjvdp5E5w8EVBMoQy63pump
           </div>
         </div>
       </div>
@@ -91,56 +94,23 @@ function App() {
         </div>
       </div>
 
-      <div className='absolute bottom-8 left-5 text-slate-700 font-custom'>
-        click dog for fortune
-      </div>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <motion.img
-          src="/bg1.png"
-          alt="Overlay"
-          style={{
-            maxWidth: '75%',
-            maxHeight: '75%',
-          }}
-          animate={{
-            rotate: [0, 360], // Rotates from 0 to 360 degrees
-          }}
-          transition={{
-            duration: 7, // Duration of one complete rotation
-            repeat: Infinity, // Repeat infinitely
-            ease: 'linear', // Linear easing for smooth rotation
-          }}
-        />
-      </div>
       <div className="absolute inset-0 flex items-center justify-center -translate-x-2 md:-translate-x-4">
         <motion.img
-          src="/spirit.png"
-          alt="Spirit"
+          src="/dog.png"
+          alt="Dog"
           className="cursor-pointer max-w-[60%] md:max-w-[45%]"
           animate={{
             y: [0, -20, 0], // Hover up and down
+            rotate: [0, -7, 7, 0], // Shaking effect
+            x: [0, 3, -3, 0] // Shaking effect
           }}
           transition={{
-            duration: 2, // Duration of one hover cycle
+            duration: 0.2, // Duration of one shake cycle
             repeat: Infinity, // Repeat infinitely
             ease: 'easeInOut', // Smooth ease-in-out transition
           }}
-          onClick={handleSpiritClick}
         />
       </div>
-      {modalVisible && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 font-custom1 p-4">
-          <div className="bg-white p-8 rounded-md text-center ring-2 ring-sky-300 ring-offset-2">
-            <h2 className="text-xl mb-4">{fortune}</h2>
-            <button 
-              onClick={handleCloseModal} 
-              className="bg-gradient-to-r from-sky-400 via-blue-700 to-indigo-400 text-white py-2 px-4 rounded-full"
-            >
-              Bless You O Higher One
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

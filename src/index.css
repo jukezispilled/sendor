@@ -4,12 +4,6 @@
 
 @font-face {
   font-family: 'CustomFont';
-  src: url('/public/Inika.ttf') format('truetype');
-  /* Other font formats (woff, woff2, etc.) could also be added here */
-}
-
-@font-face {
-  font-family: 'CustomFont1';
-  src: url('/public/Inika-Bold.ttf') format('truetype');
+  src: url('/public/A.ttf') format('truetype');
   /* Other font formats (woff, woff2, etc.) could also be added here */
 }
