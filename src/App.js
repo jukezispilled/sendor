@@ -70,10 +70,10 @@ function App() {
         SENDOOOR
       </div>
       <div className='absolute left-5 top-5 flex justify-center rounded-full'>
-        <div className='rounded-full flex justify-center bg-slate-100 z-10 items-center gap-1 md:gap-4 px-5 py-3 max-w-full border-2'>
+        <div className='rounded-xl flex-col justify-center bg-slate-100 z-10 items-center space-y-2 px-5 py-3 max-w-full border-2'>
           <button
             onClick={handleCopy}
-            className="rounded-full text-xs bg-orange-500 text-white py-2 px-4 md:hover:bg-orange-600 transition-colors duration-300 z-10 whitespace-nowrap"
+            className="rounded-xl text-xs bg-orange-500 text-white py-2 px-4 md:hover:bg-orange-600 transition-colors duration-300 z-10 whitespace-nowrap"
           >
             {copied ? 'Copied!' : <CopyIcon />}
           </button>
